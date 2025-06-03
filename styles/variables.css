@@ -1,0 +1,28 @@
+/*
+  Переменные для вашего проекта
+  и их переопределение под различные устройства
+*/
+:root {
+  --nofocus-bgd-image: url(../images/cover-image-dark.png);
+  --nofocus-main-font: "IBM Plex mono";
+  --nofocus-font-size: 18px;
+  --nofocus-heading-font-size-mobile: clamp(
+    7.25rem,
+    7.0115rem + 1.0178vw,
+    7.5rem
+  );
+  --nofocus-heading-font-size-desktop: clamp(
+    7.5rem,
+    0.5625rem + 14.4531vw,
+    9.8125rem
+  );
+  --nofocus-color-recsymbol: #ff0070;
+  --nofocus-color-button: #ff0070;
+  --nofocus-color-buttonhover: #ff007066;
+  --nofocus-color-hero: #db00ff;
+  --nofocus-color-accent: #ff0070;
+  --nofocus-color-text-heading: #000028;
+  --nofocus-color-text: #f1b2ce;
+  --nofocus-color-title-accent: #ff0070;
+  --nofocus-color-background: #000028;
+}

@@ -1,0 +1,294 @@
+/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+
+.page {
+  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  padding: 10px;
+  color: var(--nofocus-color-text);
+  font-family: var(--nofocus-main-font), sans-serif;
+  font-size: var(--nofocus-font-size);
+  background-image: var(--nofocus-bgd-image);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.title-decor {
+  background-color: var(--nofocus-color-accent);
+  color: var(--nofocus-color-text-heading);
+  font-weight: 700;
+}
+.rec-symbol {
+  position: absolute;
+  margin: 2px 10px 0 0;
+  inset-inline-end: 10px;
+  inset-block-start: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-transform: uppercase;
+  color: var(--nofocus-color-recsymbol);
+}
+.rec-symbol::after {
+  content: "";
+  display: block;
+  border-radius: 50%;
+  box-shadow: 0 0 5px 4px var(--nofocus-color-recsymbol);
+  background-color: var(--nofocus-color-recsymbol);
+  inline-size: 7px;
+  block-size: 7px;
+}
+.decorated-zone {
+  position: relative;
+  min-block-size: 97vh;
+}
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  border-top: 1px solid var(--nofocus-color-accent);
+  border-right: 1px solid var(--nofocus-color-accent);
+  inline-size: 25px;
+  block-size: 25px;
+  inset-inline-end: 0;
+  inset-block-start: 0;
+}
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid var(--nofocus-color-accent);
+  border-left: 1px solid var(--nofocus-color-accent);
+  inline-size: 25px;
+  block-size: 25px;
+  inset-block-end: 0;
+}
+.accented-link {
+  display: inline-flex;
+  text-shadow: 2px 2px 0 var(--nofocus-color-accent);
+}
+.accented-link:hover {
+  border-bottom: 1px solid var(--nofocus-color-text);
+}
+.accented-link:focus {
+  outline: none;
+  box-shadow: none;
+  border: 1px solid var(--nofocus-color-text);
+}
+.header {
+  display: grid;
+  grid-template-rows: auto max-content auto;
+  align-items: center;
+  margin-block-end: 50px;
+}
+.header__theme-menu {
+  margin-block-start: 5px;
+  justify-self: end;
+}
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.header__theme-menu-button {
+  border: none;
+  padding: 0px 13px 0px 13px;
+  outline: 1px solid transparent;
+  color: var(--nofocus-color-button);
+  text-transform: lowercase;
+  background-color: transparent;
+  cursor: pointer;
+}
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--nofocus-color-buttonhover);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--nofocus-color-accent);
+  outline: none;
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid var(--nofocus-color-accent);
+}
+.title-text {
+  color: var(--nofocus-color-hero);
+  font-size: var(--nofocus-heading-font-size-mobile);
+  line-height: 82.5%;
+  font-weight: bold;
+}
+.header__title-text {
+  align-self: self-start;
+  margin: 15px 0 0;
+  text-shadow: 4px 4px 0 var(--nofocus-color-accent);
+}
+.header__description-text {
+  justify-self: end;
+  margin: 0;
+  max-inline-size: 364px;
+}
+.main__article {
+  margin-block-end: 50px;
+  line-height: 130%;
+}
+.main__article-heading {
+  margin: 0 0 20px;
+  color: var(--nofocus-color-accent);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 130%;
+}
+.main__article-advice-heading {
+  margin-block-end: 17px;
+  color: var(--nofocus-color-text-heading);
+}
+.main__article-subheading {
+  margin-block-end: 10px;
+}
+p {
+  margin-block-end: 20px;
+  line-height: 130%;
+}
+.images__section-container {
+  margin-bottom: 50px;
+}
+.image {
+  object-fit: cover;
+  object-position: top;
+  inline-size: 100%;
+}
+.images__image-container {
+  display: flex;
+}
+.images__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 10px;
+}
+.footer {
+  display: grid;
+  grid-template-rows: 1fr;
+  align-items: center;
+}
+.footer__title-text {
+  text-shadow: 2px 2px 0 var(--nofocus-color-title-accent);
+}
+@media (width >= 768px) {
+  .page {
+    padding: 20px;
+  }
+  .title-text {
+    margin: 20px 0 0 -20px;
+  }
+  .decorated-zone {
+    min-block-size: 96vh;
+  }
+  .header {
+    margin-block-end: 80px;
+  }
+  .main__article {
+    margin-block-end: 60px;
+  }
+  .main__article-subject {
+    display: grid;
+    grid-template-columns: 236px 1fr;
+    column-gap: 20px;
+  }
+  .main__article-subject-text-container {
+    grid-column-start: 2;
+  }
+  .main__article-cause {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content repeat(3, auto);
+    column-gap: 20px;
+  }
+  .main__article-advice {
+    display: grid;
+    grid-template-columns: 236px 1fr;
+    grid-template-rows: repeat(5, auto);
+    column-gap: 20px;
+  }
+  .main__article-advice-text-container {
+    grid-column: 2;
+  }
+  .main__article-cause-heading {
+    margin: 0 0 20px 0;
+    max-inline-size: 120px;
+  }
+  .main__article-advice-heading {
+    max-block-size: 23px;
+    margin-block-end: 20px;
+  }
+  .main__article-subheading-pics {
+    margin-block-end: 20px;
+  }
+  .images__list {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, fit-content);
+    margin-block-end: 80px;
+  }
+  .image__sunset {
+    grid-column: 1 / 3;
+  }
+  .image__ice-cream {
+    grid-column: 3;
+    grid-row: 1 / 3;
+  }
+  .image__tape {
+    grid-row: 2 / 4;
+  }
+  .image__street {
+    grid-column: 2 / 4;
+  }
+  .footer__title-text {
+    margin: 0;
+    align-self: center;
+    justify-self: center;
+  }
+}
+@media (width >= 1024px) {
+  .decorated-zone {
+    min-block-size: 94.7vh;
+  }
+  .header__theme-menu {
+    justify-self: center;
+    align-self: self-start;
+    margin: 0;
+  }
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
+  .title-text {
+    font-size: var(--nofocus-heading-font-size-desktop);
+    margin: 50px 0 0 -20px;
+  }
+  .header__description-text {
+    margin: 0;
+    padding: 0;
+    max-inline-size: 491px;
+  }
+  .main__article-subject {
+    grid-template-columns: 314px 1fr;
+  }
+  .main__article-cause {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+  }
+  .main__article-cause-text-container {
+    grid-row: 2;
+  }
+  .main__article-cause-heading {
+    max-inline-size: 314px;
+  }
+  .main__article-advice {
+    grid-template-columns: 314px 1fr;
+  }
+  .footer__title-text {
+    margin: 0;
+  }
+}

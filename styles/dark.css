@@ -1,0 +1,26 @@
+/*
+  Специально для тёмной темы при наличии класса,
+  здесь окажутся стили, которые нужно переопределить принудительно,
+  переключая тему
+*/
+
+:root.theme-dark {
+  /* сохраните этот селектор в приведённом виде.
+    Так стили написанные ниже будут иметь больший вес,
+    чем стили в медиазапросе предпочтений пользователя
+  */
+  --nofocus-bgd-image: url(../images/cover-image-dark.png);
+  --nofocus-color-recsymbol: #ff0070;
+  --nofocus-color-button: #ff0070;
+  --nofocus-color-buttonhover: #ff007066;
+  --nofocus-color-hero: #db00ff;
+  --nofocus-color-accent: #ff0070;
+  --nofocus-color-text-heading: #000028;
+  --nofocus-color-text: #f1b2ce;
+  --nofocus-color-title-accent: #ff0070;
+  --nofocus-color-background: #000028;
+}
+
+.theme-dark .page {
+  /* Вам также нужно будет написать ряд подобных селекторов */
+}
