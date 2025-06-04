@@ -11,6 +11,7 @@
   background-position: top center;
   background-size: cover;
   background-attachment: fixed;
+  background-color: var(--nofocus-color-bgd-fallback);
 }
 .title-decor {
   background-color: var(--nofocus-color-accent);
@@ -39,7 +40,8 @@
 }
 .decorated-zone {
   position: relative;
-  min-block-size: 97vh;
+  block-size: 100vh;
+  min-block-size: 668px;
 }
 .decorated-zone::before {
   content: "";
@@ -134,17 +136,16 @@
 }
 .main__article-heading {
   margin: 0 0 20px;
-  color: var(--nofocus-color-accent);
+  color: var(--nofocus-color-text-heading);
   font-weight: 700;
   font-size: 18px;
   line-height: 130%;
 }
-.main__article-advice-heading {
-  margin-block-end: 17px;
-  color: var(--nofocus-color-text-heading);
-}
 .main__article-subheading {
   margin-block-end: 10px;
+}
+h4.main__article-subheading {
+  font-weight: initial;
 }
 p {
   margin-block-end: 20px;
@@ -179,10 +180,12 @@ p {
     padding: 20px;
   }
   .title-text {
+    font-size: var(--nofocus-heading-font-size-desktop);
     margin: 20px 0 0 -20px;
   }
   .decorated-zone {
-    min-block-size: 96vh;
+    block-size: 96vh;
+    max-block-size: 1024px;
   }
   .header {
     margin-block-end: 80px;
@@ -195,13 +198,22 @@ p {
     grid-template-columns: 236px 1fr;
     column-gap: 20px;
   }
-  .main__article-subject-text-container {
-    grid-column-start: 2;
+  .subject-text-container {
+    grid-column: 2;
+  }
+  .main__article-heading {
+    max-inline-size: 236px;
+  }
+  .main__article-advices-heading {
+    max-inline-size: inherit;
+  }
+  .main__article-heading-pics {
+    max-inline-size: inherit;
   }
   .main__article-cause {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: max-content repeat(3, auto);
+    grid-template-rows: repeat(4, max-content);
     column-gap: 20px;
   }
   .main__article-advice {
@@ -210,25 +222,14 @@ p {
     grid-template-rows: repeat(5, auto);
     column-gap: 20px;
   }
-  .main__article-advice-text-container {
+  .advice-text-container {
     grid-column: 2;
-  }
-  .main__article-cause-heading {
-    margin: 0 0 20px 0;
-    max-inline-size: 120px;
-  }
-  .main__article-advice-heading {
-    max-block-size: 23px;
-    margin-block-end: 20px;
-  }
-  .main__article-subheading-pics {
-    margin-block-end: 20px;
   }
   .images__list {
     display: grid;
     gap: 20px;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(3, fit-content);
+    grid-template-rows: repeat(3, fit-content(auto));
     margin-block-end: 80px;
   }
   .image__sunset {
@@ -252,7 +253,10 @@ p {
 }
 @media (width >= 1024px) {
   .decorated-zone {
-    min-block-size: 94.7vh;
+    max-block-size: 768px;
+  }
+    .header {
+    margin-block-end: 70px;
   }
   .header__theme-menu {
     justify-self: center;
@@ -262,14 +266,14 @@ p {
   .header__theme-menu-list {
     flex-direction: row;
   }
-  .title-text {
-    font-size: var(--nofocus-heading-font-size-desktop);
-    margin: 50px 0 0 -20px;
-  }
   .header__description-text {
     margin: 0;
     padding: 0;
     max-inline-size: 491px;
+  }
+
+  .main__article-heading {
+    max-inline-size: 315px;
   }
   .main__article-subject {
     grid-template-columns: 314px 1fr;
@@ -279,14 +283,17 @@ p {
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 20px;
   }
-  .main__article-cause-text-container {
+  .cause-text-container {
     grid-row: 2;
-  }
-  .main__article-cause-heading {
-    max-inline-size: 314px;
   }
   .main__article-advice {
     grid-template-columns: 314px 1fr;
+  }
+  .main__article-advices-heading {
+    max-inline-size: inherit;
+  }
+  .main__article-heading-pics {
+    max-inline-size: inherit;
   }
   .footer__title-text {
     margin: 0;

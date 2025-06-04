@@ -10,6 +10,7 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --nofocus-bgd-image: url(../images/cover-image-dark.png);
+  --nofocus-color-bgd-fallback: #000028;
   --nofocus-color-recsymbol: #ff0070;
   --nofocus-color-button: #ff0070;
   --nofocus-color-buttonhover: #ff007066;

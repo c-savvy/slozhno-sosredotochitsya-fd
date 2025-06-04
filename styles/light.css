@@ -9,6 +9,7 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --nofocus-bgd-image: url(../images/cover-image-light.png);
+  --nofocus-color-bgd-fallback: #f5f5f5;
   --nofocus-color-hero: #ffc2e6;
   --nofocus-color-accent: #ff8dcb;
   --nofocus-color-button: #353430;
@@ -22,6 +23,7 @@
 @media (prefers-color-scheme: light) {
   :root {
     --nofocus-bgd-image: url(../images/cover-image-light.png);
+    --nofocus-color-bgd-fallback: #f5f5f5;
     --nofocus-color-hero: #ffc2e6;
     --nofocus-color-accent: #ff8dcb;
     --nofocus-color-button: #353430;
