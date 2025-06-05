@@ -46,8 +46,8 @@
 .decorated-zone::before {
   content: "";
   position: absolute;
-  border-top: 1px solid var(--nofocus-color-accent);
-  border-right: 1px solid var(--nofocus-color-accent);
+  border-top: 1px solid var(--nofocus-color-decoration);
+  border-right: 1px solid var(--nofocus-color-decoration);
   inline-size: 25px;
   block-size: 25px;
   inset-inline-end: 0;
@@ -56,8 +56,8 @@
 .decorated-zone::after {
   content: "";
   position: absolute;
-  border-bottom: 1px solid var(--nofocus-color-accent);
-  border-left: 1px solid var(--nofocus-color-accent);
+  border-bottom: 1px solid var(--nofocus-color-decoration);
+  border-left: 1px solid var(--nofocus-color-decoration);
   inline-size: 25px;
   block-size: 25px;
   inset-block-end: 0;
@@ -78,16 +78,16 @@
   display: grid;
   grid-template-rows: auto max-content auto;
   align-items: center;
-  margin-block-end: 50px;
+  margin-block-end: 30px;
 }
 .header__theme-menu {
-  margin-block-start: 5px;
+  margin-block-start: 10px;
   justify-self: end;
 }
 .header__theme-menu-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 13px;
 }
 .header__theme-menu-button {
   border: none;
@@ -122,12 +122,11 @@
 }
 .header__title-text {
   align-self: self-start;
-  margin: 15px 0 0;
+  transform: translateY(20px);
   text-shadow: 4px 4px 0 var(--nofocus-color-accent);
 }
 .header__description-text {
   justify-self: end;
-  margin: 0;
   max-inline-size: 364px;
 }
 .main__article {
@@ -150,6 +149,9 @@ h4.main__article-subheading {
 p {
   margin-block-end: 20px;
   line-height: 130%;
+}
+.main__article-heading-pics {
+  margin-block-end: 10px;
 }
 .images__section-container {
   margin-bottom: 50px;
@@ -181,14 +183,17 @@ p {
   }
   .title-text {
     font-size: var(--nofocus-heading-font-size-desktop);
-    margin: 20px 0 0 -20px;
+    transform: none;
+    margin: 0 0 0 -20px;
   }
   .decorated-zone {
-    block-size: 96vh;
-    max-block-size: 1024px;
+    min-block-size: 984px;
   }
   .header {
-    margin-block-end: 80px;
+    margin-block-end: 40px;
+  }
+  .header__description-text {
+    transform: translateY(-10px);
   }
   .main__article {
     margin-block-end: 60px;
@@ -225,6 +230,9 @@ p {
   .advice-text-container {
     grid-column: 2;
   }
+  .main__article-heading-pics {
+    margin-block-end: 20px;
+  }
   .images__list {
     display: grid;
     gap: 20px;
@@ -247,16 +255,17 @@ p {
   }
   .footer__title-text {
     margin: 0;
+    transform: translateY(-20px);
     align-self: center;
     justify-self: center;
   }
 }
 @media (width >= 1024px) {
   .decorated-zone {
-    max-block-size: 768px;
+    min-block-size: 728px;
   }
-    .header {
-    margin-block-end: 70px;
+  .header {
+    margin-block-end: 40px;
   }
   .header__theme-menu {
     justify-self: center;
@@ -269,6 +278,7 @@ p {
   .header__description-text {
     margin: 0;
     padding: 0;
+    transform: translateY(-20px);
     max-inline-size: 491px;
   }
 

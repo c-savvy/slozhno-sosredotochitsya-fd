@@ -18,6 +18,7 @@
   );
   --nofocus-color-bgd-fallback: #000028;
   --nofocus-color-recsymbol: #ff0070;
+  --nofocus-color-decoration: #ff0070;
   --nofocus-color-button: #ff0070;
   --nofocus-color-buttonhover: #ff007066;
   --nofocus-color-hero: #db00ff;
