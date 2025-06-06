@@ -2,7 +2,6 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
-  padding: 10px;
   color: var(--nofocus-color-text);
   font-family: var(--nofocus-main-font), sans-serif;
   font-size: var(--nofocus-font-size);
@@ -50,8 +49,8 @@
   border-right: 1px solid var(--nofocus-color-decoration);
   inline-size: 25px;
   block-size: 25px;
-  inset-inline-end: 0;
-  inset-block-start: 0;
+  inset-inline-end: 10px;
+  inset-block-start: 10px;
 }
 .decorated-zone::after {
   content: "";
@@ -60,7 +59,8 @@
   border-left: 1px solid var(--nofocus-color-decoration);
   inline-size: 25px;
   block-size: 25px;
-  inset-block-end: 0;
+  inset-inline-start: 10px;
+  inset-block-end: 10px;
 }
 .accented-link {
   display: inline-flex;
@@ -75,10 +75,11 @@
   border: 1px solid var(--nofocus-color-text);
 }
 .header {
+  padding: 10px;
   display: grid;
   grid-template-rows: auto max-content auto;
   align-items: center;
-  margin-block-end: 30px;
+  margin-block-end: 40px;
 }
 .header__theme-menu {
   margin-block-start: 10px;
@@ -91,7 +92,7 @@
 }
 .header__theme-menu-button {
   border: none;
-  padding: 0px 13px 0px 13px;
+  padding: 0 13px 0 13px;
   outline: 1px solid transparent;
   color: var(--nofocus-color-button);
   text-transform: lowercase;
@@ -107,14 +108,15 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--nofocus-color-accent);
+  border-bottom: 1px solid var(--nofocus-color-button);
   outline: none;
 }
 
 .header__theme-menu-button_active {
-  outline: 1px solid var(--nofocus-color-accent);
+  outline: 1px solid var(--nofocus-color-button);
 }
 .title-text {
+  justify-self: center;
   color: var(--nofocus-color-hero);
   font-size: var(--nofocus-heading-font-size-mobile);
   line-height: 82.5%;
@@ -123,25 +125,32 @@
 .header__title-text {
   align-self: self-start;
   transform: translateY(20px);
-  text-shadow: 4px 4px 0 var(--nofocus-color-accent);
+  text-shadow: 4px 4px 0 var(--nofocus-color-hero-shadow);
 }
 .header__description-text {
+  transform: translateY(20px);
   justify-self: end;
   max-inline-size: 364px;
 }
+main {
+  padding: 0 10px;
+}
 .main__article {
-  margin-block-end: 50px;
+  margin-block-end: 49px;
   line-height: 130%;
 }
 .main__article-heading {
   margin: 0 0 20px;
-  color: var(--nofocus-color-text-heading);
+  color: var(--nofocus-color-title-accent);
   font-weight: 700;
   font-size: 18px;
   line-height: 130%;
 }
 .main__article-subheading {
   margin-block-end: 10px;
+}
+.main__article-advices-heading {
+  margin-block-end: 20px;
 }
 h4.main__article-subheading {
   font-weight: initial;
@@ -154,7 +163,7 @@ p {
   margin-block-end: 10px;
 }
 .images__section-container {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 .image {
   object-fit: cover;
@@ -175,25 +184,39 @@ p {
   align-items: center;
 }
 .footer__title-text {
+  transform: translateY(10px);
   text-shadow: 2px 2px 0 var(--nofocus-color-title-accent);
 }
 @media (width >= 768px) {
-  .page {
-    padding: 20px;
+  main {
+    padding: 0 20px;
+  }
+  .rec-symbol {
+    margin: 11px 21px 0 0;
   }
   .title-text {
     font-size: var(--nofocus-heading-font-size-desktop);
     transform: none;
     margin: 0 0 0 -20px;
   }
+  .header__title-text {
+    transform: translateY(20px);
+    justify-self: start;
+  }
   .decorated-zone {
-    min-block-size: 984px;
+    min-block-size: 1024px;
+  }
+  .decorated-zone::before {
+      inset-inline-end: 20px;
+      inset-block-start: 20px;
+  }
+  .decorated-zone::after {
+    inset-inline-start: 20px;
+    inset-block-end: 20px;
   }
   .header {
-    margin-block-end: 40px;
-  }
-  .header__description-text {
-    transform: translateY(-10px);
+    padding: 20px;
+    margin-block-end: 60px;
   }
   .main__article {
     margin-block-end: 60px;
@@ -214,12 +237,12 @@ p {
   }
   .main__article-heading-pics {
     max-inline-size: inherit;
+    margin-block-end: 20px;
   }
   .main__article-cause {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, max-content);
-    column-gap: 20px;
+    grid-template-rows: 1fr max-content;
   }
   .main__article-advice {
     display: grid;
@@ -230,15 +253,12 @@ p {
   .advice-text-container {
     grid-column: 2;
   }
-  .main__article-heading-pics {
-    margin-block-end: 20px;
-  }
   .images__list {
     display: grid;
     gap: 20px;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(3, fit-content(auto));
-    margin-block-end: 80px;
+    grid-template-rows: repeat(3, auto);
+    margin-block-end: 60px;
   }
   .image__sunset {
     grid-column: 1 / 3;
@@ -255,17 +275,13 @@ p {
   }
   .footer__title-text {
     margin: 0;
-    transform: translateY(-20px);
     align-self: center;
     justify-self: center;
   }
 }
 @media (width >= 1024px) {
   .decorated-zone {
-    min-block-size: 728px;
-  }
-  .header {
-    margin-block-end: 40px;
+    min-block-size: 768px;
   }
   .header__theme-menu {
     justify-self: center;
@@ -274,14 +290,14 @@ p {
   }
   .header__theme-menu-list {
     flex-direction: row;
+    gap: 11px;
   }
   .header__description-text {
     margin: 0;
     padding: 0;
-    transform: translateY(-20px);
+    transform: translateY(10px);
     max-inline-size: 491px;
   }
-
   .main__article-heading {
     max-inline-size: 315px;
   }
@@ -293,19 +309,23 @@ p {
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 20px;
   }
+    .main__article-cause-grid-container {
+    grid-column: 1 / 4;
+    display: grid;
+    column-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+  }
   .cause-text-container {
     grid-row: 2;
   }
   .main__article-advice {
     grid-template-columns: 314px 1fr;
   }
-  .main__article-advices-heading {
-    max-inline-size: inherit;
-  }
   .main__article-heading-pics {
     max-inline-size: inherit;
   }
   .footer__title-text {
+    text-shadow: 2px 2px 0 var(--nofocus-color-title-footer-desktop);
     margin: 0;
   }
 }
