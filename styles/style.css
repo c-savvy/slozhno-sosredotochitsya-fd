@@ -207,8 +207,8 @@ p {
     min-block-size: 1024px;
   }
   .decorated-zone::before {
-      inset-inline-end: 20px;
-      inset-block-start: 20px;
+    inset-inline-end: 20px;
+    inset-block-start: 20px;
   }
   .decorated-zone::after {
     inset-inline-start: 20px;
@@ -309,7 +309,7 @@ p {
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 20px;
   }
-    .main__article-cause-grid-container {
+  .main__article-cause-grid-container {
     grid-column: 1 / 4;
     display: grid;
     column-gap: 20px;
