@@ -1,6 +1,7 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+  /* transition: all 450ms ease-in-out 1ms; */
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   color: var(--nofocus-color-text);
   font-family: var(--nofocus-main-font), sans-serif;
@@ -14,7 +15,7 @@
 }
 .title-decor {
   background-color: var(--nofocus-color-accent);
-  color: var(--nofocus-color-text-heading);
+  color: var(--nofocus-color-text-subheading);
   font-weight: 700;
 }
 .rec-symbol {
@@ -140,8 +141,8 @@ main {
   line-height: 130%;
 }
 .main__article-heading {
+  color: var(--nofocus-color-text-heading);
   margin: 0 0 20px;
-  color: var(--nofocus-color-title-accent);
   font-weight: 700;
   font-size: 18px;
   line-height: 130%;
@@ -185,7 +186,7 @@ p {
 }
 .footer__title-text {
   transform: translateY(10px);
-  text-shadow: 2px 2px 0 var(--nofocus-color-title-accent);
+  text-shadow: 2px 2px 0 var(--nofocus-color-hero-shadow);
 }
 @media (width >= 768px) {
   main {
@@ -315,9 +316,6 @@ p {
     column-gap: 20px;
     grid-template-columns: repeat(3, 1fr);
   }
-  .cause-text-container {
-    grid-row: 2;
-  }
   .main__article-advice {
     grid-template-columns: 314px 1fr;
   }
@@ -325,7 +323,6 @@ p {
     max-inline-size: inherit;
   }
   .footer__title-text {
-    text-shadow: 2px 2px 0 var(--nofocus-color-title-footer-desktop);
     margin: 0;
   }
 }

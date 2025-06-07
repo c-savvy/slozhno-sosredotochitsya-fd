@@ -10,34 +10,36 @@
   */
   --nofocus-bgd-image: url(../images/cover-image-light.png);
   --nofocus-color-bgd-fallback: #f5f5f5;
+  --nofocus-color-recsymbol: transparent;
+  --nofocus-color-decoration: #353430;
+  --nofocus-color-button: #353430;
+  --nofocus-color-buttonhover: #32312d66;
   --nofocus-color-hero: #ffc2e6;
   --nofocus-color-hero-shadow: #ff8dcb;
   --nofocus-color-accent: #ff8dcb;
-  --nofocus-color-button: #353430;
-  --nofocus-color-buttonhover: #32312d66;
-  --nofocus-color-background: #ffc2e6;
+  --nofocus-color-text-heading: #353430;
+  --nofocus-color-text-subheading: #353430;
   --nofocus-color-text: #353430;
   --nofocus-color-title-accent: #353430;
-  --nofocus-color-title-footer-desktop: #ff0070;
-  --nofocus-color-text-heading: #353430;
-  --nofocus-color-decoration: #353430;
-  --nofocus-color-recsymbol: transparent;
+  --nofocus-color-background: #ffc2e6;
 }
 @media (prefers-color-scheme: light) {
   :root {
-    --nofocus-bgd-image: url(../images/cover-image-light.png);
-    --nofocus-color-bgd-fallback: #f5f5f5;
-    --nofocus-color-hero: #ffc2e6;
-    --nofocus-color-hero-shadow: #ff8dcb;
-    --nofocus-color-accent: #ff8dcb;
-    --nofocus-color-button: #353430;
-    --nofocus-color-buttonhover: #32312d66;
-    --nofocus-color-background: #ffc2e6;
-    --nofocus-color-text: #353430;
-    --nofocus-color-title-accent: #353430;
-    --nofocus-color-text-heading: #353430;
-    --nofocus-color-decoration: #353430;
-    --nofocus-color-recsymbol: transparent;
+  --nofocus-bgd-image: url(../images/cover-image-light.png);
+  --nofocus-color-bgd-fallback: #f5f5f5;
+  --nofocus-color-recsymbol: transparent;
+  --nofocus-color-decoration: #353430;
+  --nofocus-color-button: #353430;
+  --nofocus-color-buttonhover: #32312d66;
+  --nofocus-color-hero: #ffc2e6;
+  --nofocus-color-hero-shadow: #ff8dcb;
+  --nofocus-color-accent: #ff8dcb;
+  --nofocus-color-text-heading: #353430;
+  --nofocus-color-text-subheading: #353430;
+  --nofocus-color-text: #353430;
+  --nofocus-color-title-accent: #353430;
+  --nofocus-color-background: #ffc2e6;
+
   }
 }
 
